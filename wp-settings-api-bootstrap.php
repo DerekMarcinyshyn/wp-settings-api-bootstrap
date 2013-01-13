@@ -165,6 +165,7 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                         'type'      => 'about'
                     )
                 ),
+
                 'wp_settings_api_advanced' => array(
                     array(
                         'name'      => 'text',

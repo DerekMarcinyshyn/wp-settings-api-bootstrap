@@ -37,6 +37,25 @@ Usage Example Plugin
 
 Included is an example plugin displaying all of the available input fields.
 
+```
+<?php
+// set a variable to get section
+// returns an array object
+$my_basic_settings = get_option('wp_settings_api_basics');
+$my_advanced_settings = get_option('wp_settings_api_advanced');
+
+// echo the Basic Settings text value
+echo $my_basic_settings['text'];
+
+// echo the Basic Settings textarea value
+echo $my_basic_settings['textarea'];
+
+// echo the Advanced Settings checkbox value
+echo $my_advanced_settings['checkbox'];
+
+?>
+```
+
 Notes
 -----
 
