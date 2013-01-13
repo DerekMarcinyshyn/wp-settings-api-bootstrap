@@ -34,3 +34,13 @@ Usage Example Plugin
 --------------------
 
 Included is an example plugin displaying all of the available input fields.
+
+Notes
+-----
+
+Colorpicker needs a default color in order to work.
+
+Screenshot
+----------
+
+![Option Panel](https://github.com/tareq1988/wordpress-settings-api-class/raw/master/screenshot-1.png "The options panel build on the fly using the PHP Class"

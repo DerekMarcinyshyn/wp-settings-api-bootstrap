@@ -83,6 +83,11 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
          * @return array settings fields
          */
         function get_settings_fields() {
+
+            $about = '<h2>WP Settings API Bootstrap</h2>
+                <p>WP Settings API Bootstrap is a WordPress class for plugin and theme developers to speed up development of their admin pages.</p>
+                <p><a href="https://github.com/DerekMarcinyshyn/wp-settings-api-bootstrap" target="_blank">More information here.</a></p>';
+
             $settings_fields = array(
                 'wp_settings_api_basics' => array(
                     array(
@@ -136,6 +141,26 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                             'yes' => 'Yes',
                             'no' => 'No'
                         )
+                    ),
+                    array(
+                        'name'      => 'colorpicker',
+                        'label'     => __( 'A colorpicker', 'mytextdomain' ),
+                        'desc'      => __( 'Colorpicker description', 'mytextdomain' ),
+                        'type'      => 'colorpicker',
+                        'default'   => '#ff0000'
+                    ),
+                    array(
+                        'name'      => 'media_uploader',
+                        'label'     => __( 'Media Uploader', 'mytextdomain' ),
+                        'desc'      => __( 'Uploader description', 'mytextdomain' ),
+                        'type'      => 'media',
+                        'default'   => 'http://s.wordpress.org/about/images/logos/wordpress-logo-hoz-rgb.png'
+                    ),
+                    array(
+                        'name' => 'about',
+                        'label' => __( 'About', 'mytextdomain' ),
+                        'desc' => __( $about, 'mytextdomain' ),
+                        'type' => 'about'
                     )
                 ),
                 'wp_settings_api_advanced' => array(
@@ -195,55 +220,10 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                 ),
                 'wp_settings_api_about' => array(
                     array(
-                        'name' => 'text',
-                        'label' => __( 'Text Input', 'mytextdomain' ),
-                        'desc' => __( 'Text input description', 'mytextdomain' ),
-                        'type' => 'text',
-                        'default' => 'Title'
-                    ),
-                    array(
-                        'name' => 'textarea',
-                        'label' => __( 'Textarea Input', 'mytextdomain' ),
-                        'desc' => __( 'Textarea description', 'mytextdomain' ),
-                        'type' => 'textarea'
-                    ),
-                    array(
-                        'name' => 'checkbox',
-                        'label' => __( 'Checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Checkbox Label', 'mytextdomain' ),
-                        'type' => 'checkbox'
-                    ),
-                    array(
-                        'name' => 'radio',
-                        'label' => __( 'Radio Button', 'mytextdomain' ),
-                        'desc' => __( 'A radio button', 'mytextdomain' ),
-                        'type' => 'radio',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
-                        )
-                    ),
-                    array(
-                        'name' => 'multicheck',
-                        'label' => __( 'Multile checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Multi checkbox description', 'mytextdomain' ),
-                        'type' => 'multicheck',
-                        'options' => array(
-                            'one' => 'One',
-                            'two' => 'Two',
-                            'three' => 'Three',
-                            'four' => 'Four'
-                        )
-                    ),
-                    array(
-                        'name' => 'selectbox',
-                        'label' => __( 'A Dropdown', 'mytextdomain' ),
-                        'desc' => __( 'Dropdown description', 'mytextdomain' ),
-                        'type' => 'select',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
-                        )
+                        'name' => 'about',
+                        'label' => __( 'About', 'mytextdomain' ),
+                        'desc' => __( $about, 'mytextdomain' ),
+                        'type' => 'about'
                     )
                 )
             );
