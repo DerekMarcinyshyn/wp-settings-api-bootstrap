@@ -134,7 +134,7 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                     ),
                     array(
                         'name'      => 'selectbox',
-                        'label'     => __( 'A Dropdown', 'mytextdomain' ),
+                        'label'     => __( 'Dropdown', 'mytextdomain' ),
                         'desc'      => __( 'Dropdown description', 'mytextdomain' ),
                         'type'      => 'select',
                         'default'   => 'no',
@@ -145,7 +145,7 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                     ),
                     array(
                         'name'      => 'colorpicker',
-                        'label'     => __( 'A colorpicker', 'mytextdomain' ),
+                        'label'     => __( 'Colorpicker', 'mytextdomain' ),
                         'desc'      => __( 'Colorpicker description', 'mytextdomain' ),
                         'type'      => 'colorpicker',
                         'default'   => '#ff0000'
@@ -155,7 +155,8 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                         'label'     => __( 'Media Uploader', 'mytextdomain' ),
                         'desc'      => __( 'Uploader description', 'mytextdomain' ),
                         'type'      => 'media',
-                        'default'   => 'http://s.wordpress.org/about/images/logos/wordpress-logo-hoz-rgb.png'
+                        'default'   => 'http://s.wordpress.org/about/images/logos/wordpress-logo-hoz-rgb.png',
+                        'btn_title' => 'Upload image'
                     ),
                     array(
                         'name'      => 'about',
@@ -237,6 +238,9 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
          */
         function plugin_page() {
             echo '<div class="wrap">';
+            echo '<div id="icon-options-general" class="icon32"></div>';
+            echo '<h2>WP Settings API Bootstrap Demo</h2>';
+
             settings_errors();
 
             $this->wp_settings_api->show_navigation();

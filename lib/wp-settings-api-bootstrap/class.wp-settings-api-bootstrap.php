@@ -29,10 +29,16 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
          */
         private static $_instance;
 
+        /**
+         * Constructor
+         */
         public function __construct() {
 
         }
 
+        /**
+         * @return object|WP_Settings_API_Bootstrap
+         */
         public static function getInstance() {
             if ( !self::$_instance ) {
                 self::$_instance = new WP_Settings_API_Bootstrap();
@@ -68,6 +74,12 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
             $this->settings_fields = $fields;
         }
 
+        /**
+         * Add settings field
+         *
+         * @param $section
+         * @param $field
+         */
         function add_field( $section, $field ) {
             $defaults = array(
                 'name' => '',
@@ -81,7 +93,7 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
         }
 
         /**
-         * Initialize and registers the settings sections and fileds to WordPress
+         * Initialize and registers the settings sections and fields to WordPress
          *
          * Usually this should be called at `admin_init` hook.
          *
@@ -106,13 +118,14 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
                     $type = isset( $option['type'] ) ? $option['type'] : 'text';
 
                     $args = array(
-                        'id' => $option['name'],
-                        'desc' => isset( $option['desc'] ) ? $option['desc'] : '',
-                        'name' => $option['label'],
-                        'section' => $section,
-                        'size' => isset( $option['size'] ) ? $option['size'] : null,
-                        'options' => isset( $option['options'] ) ? $option['options'] : '',
-                        'std' => isset( $option['default'] ) ? $option['default'] : ''
+                        'id'            => $option['name'],
+                        'desc'          => isset( $option['desc'] ) ? $option['desc'] : '',
+                        'name'          => $option['label'],
+                        'section'       => $section,
+                        'size'          => isset( $option['size'] ) ? $option['size'] : null,
+                        'options'       => isset( $option['options'] ) ? $option['options'] : '',
+                        'std'           => isset( $option['default'] ) ? $option['default'] : '',
+                        'btn_title'     => isset( $option['btn_title'] ) ? $option['btn_title'] : ''
                     );
                     //var_dump($args);
                     add_settings_field( $section . '[' . $option['name'] . ']', $option['label'], array( $this, 'callback_' . $type ), $section, $section, $args );
@@ -150,7 +163,7 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
         }
 
         /**
-         * Displays the WordPress 3.5 Media Manager
+         * Displays the WordPress Media Manager
          *
          * @param $args
          */
@@ -160,7 +173,7 @@ if ( ! class_exists( 'WP_Settings_API_Bootstrap' ) ):
 
             $html = '';
             $html .= sprintf( '<input type="text" class="%1$s-text" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', 'regular', $args['section'], $args['id'], $value );
-            $html .= '<input type="button" class="button" id="upload_logo_button" value="Upload Default Image"/>';
+            $html .= sprintf( '<input type="button" class="button" id="upload_logo_button" value="%1$s"/>', $args['btn_title'] );
             $html .= '<br /><br />';
             $html .= '<div id="upload_image_preview" style="min-height: 100px">';
             $html .= '<img style="max-width:100%;" src="' . $value . '" />';
