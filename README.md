@@ -43,4 +43,4 @@ Colorpicker needs a default color in order to work.
 Screenshot
 ----------
 
-![Option Panel](https://github.com/DerekMarcinyshyn/wp-settings-api-bootstrap/blob/master/screenshot.png "The options panel build on the fly using the PHP Class")
+![Option Panel](https://raw.github.com/DerekMarcinyshyn/wp-settings-api-bootstrap/master/screenshot.png "The options panel build on the fly using the PHP Class")
