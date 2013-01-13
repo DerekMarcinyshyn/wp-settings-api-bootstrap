@@ -4,9 +4,9 @@ Contributors
 ------------
 
 tareq1988 - [https://github.com/tareq1988/wordpress-settings-api-class](https://github.com/tareq1988/wordpress-settings-api-class)
+* original class
 
 Derek Marcinyshyn - [derek.marcinyshyn.com](http://derek.marcinyshyn.com)
-
 * added new types -- about, colorpicker, and media
 
 Description
@@ -36,6 +36,8 @@ Usage Example Plugin
 --------------------
 
 Included is an example plugin displaying all of the available input fields.
+
+For your plugin just copy the ```lib``` folder to your plugin or theme.
 
 ```
 <?php
