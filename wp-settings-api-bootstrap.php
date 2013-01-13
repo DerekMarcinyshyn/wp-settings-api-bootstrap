@@ -84,6 +84,7 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
          */
         function get_settings_fields() {
 
+            // a little cleaner to create a variable and add html rather than in the array
             $about = '<h2>WP Settings API Bootstrap</h2>
                 <p>WP Settings API Bootstrap is a WordPress class for plugin and theme developers to speed up development of their admin pages.</p>
                 <p><a href="https://github.com/DerekMarcinyshyn/wp-settings-api-bootstrap" target="_blank">More information here.</a></p>';
@@ -91,55 +92,55 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
             $settings_fields = array(
                 'wp_settings_api_basics' => array(
                     array(
-                        'name' => 'text',
-                        'label' => __( 'Text Input', 'mytextdomain' ),
-                        'desc' => __( 'Text input description', 'mytextdomain' ),
-                        'type' => 'text',
-                        'default' => 'Title'
+                        'name'      => 'text',
+                        'label'     => __( 'Text Input', 'mytextdomain' ),
+                        'desc'      => __( 'Text input description', 'mytextdomain' ),
+                        'type'      => 'text',
+                        'default'   => 'Title'
                     ),
                     array(
-                        'name' => 'textarea',
-                        'label' => __( 'Textarea Input', 'mytextdomain' ),
-                        'desc' => __( 'Textarea description', 'mytextdomain' ),
-                        'type' => 'textarea'
+                        'name'      => 'textarea',
+                        'label'     => __( 'Textarea Input', 'mytextdomain' ),
+                        'desc'      => __( 'Textarea description', 'mytextdomain' ),
+                        'type'      => 'textarea'
                     ),
                     array(
-                        'name' => 'checkbox',
-                        'label' => __( 'Checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Checkbox Label', 'mytextdomain' ),
-                        'type' => 'checkbox'
+                        'name'      => 'checkbox',
+                        'label'     => __( 'Checkbox', 'mytextdomain' ),
+                        'desc'      => __( 'Checkbox Label', 'mytextdomain' ),
+                        'type'      => 'checkbox'
                     ),
                     array(
-                        'name' => 'radio',
-                        'label' => __( 'Radio Button', 'mytextdomain' ),
-                        'desc' => __( 'A radio button', 'mytextdomain' ),
-                        'type' => 'radio',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
+                        'name'      => 'radio',
+                        'label'     => __( 'Radio Button', 'mytextdomain' ),
+                        'desc'      => __( 'A radio button', 'mytextdomain' ),
+                        'type'      => 'radio',
+                        'options'   => array(
+                            'yes'   => 'Yes',
+                            'no'    => 'No'
                         )
                     ),
                     array(
-                        'name' => 'multicheck',
-                        'label' => __( 'Multiple checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Multi checkbox description', 'mytextdomain' ),
-                        'type' => 'multicheck',
-                        'options' => array(
-                            'one' => 'One',
-                            'two' => 'Two',
+                        'name'      => 'multicheck',
+                        'label'     => __( 'Multiple checkbox', 'mytextdomain' ),
+                        'desc'      => __( 'Multi checkbox description', 'mytextdomain' ),
+                        'type'      => 'multicheck',
+                        'options'   => array(
+                            'one'   => 'One',
+                            'two'   => 'Two',
                             'three' => 'Three',
-                            'four' => 'Four'
+                            'four'  => 'Four'
                         )
                     ),
                     array(
-                        'name' => 'selectbox',
-                        'label' => __( 'A Dropdown', 'mytextdomain' ),
-                        'desc' => __( 'Dropdown description', 'mytextdomain' ),
-                        'type' => 'select',
-                        'default' => 'no',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
+                        'name'      => 'selectbox',
+                        'label'     => __( 'A Dropdown', 'mytextdomain' ),
+                        'desc'      => __( 'Dropdown description', 'mytextdomain' ),
+                        'type'      => 'select',
+                        'default'   => 'no',
+                        'options'   => array(
+                            'yes'   => 'Yes',
+                            'no'    => 'No'
                         )
                     ),
                     array(
@@ -157,73 +158,73 @@ if ( !class_exists( 'WP_Settings_API_Bootstrap_Demo' ) ) :
                         'default'   => 'http://s.wordpress.org/about/images/logos/wordpress-logo-hoz-rgb.png'
                     ),
                     array(
-                        'name' => 'about',
-                        'label' => __( 'About', 'mytextdomain' ),
-                        'desc' => __( $about, 'mytextdomain' ),
-                        'type' => 'about'
+                        'name'      => 'about',
+                        'label'     => __( 'About', 'mytextdomain' ),
+                        'desc'      => __( $about, 'mytextdomain' ),
+                        'type'      => 'about'
                     )
                 ),
                 'wp_settings_api_advanced' => array(
                     array(
-                        'name' => 'text',
-                        'label' => __( 'Text Input', 'mytextdomain' ),
-                        'desc' => __( 'Text input description', 'mytextdomain' ),
-                        'type' => 'text',
-                        'default' => 'Title'
+                        'name'      => 'text',
+                        'label'     => __( 'Text Input', 'mytextdomain' ),
+                        'desc'      => __( 'Text input description', 'mytextdomain' ),
+                        'type'      => 'text',
+                        'default'   => 'Title'
                     ),
                     array(
-                        'name' => 'textarea',
-                        'label' => __( 'Textarea Input', 'mytextdomain' ),
-                        'desc' => __( 'Textarea description', 'mytextdomain' ),
-                        'type' => 'textarea'
+                        'name'      => 'textarea',
+                        'label'     => __( 'Textarea Input', 'mytextdomain' ),
+                        'desc'      => __( 'Textarea description', 'mytextdomain' ),
+                        'type'      => 'textarea'
                     ),
                     array(
-                        'name' => 'checkbox',
-                        'label' => __( 'Checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Checkbox Label', 'mytextdomain' ),
-                        'type' => 'checkbox'
+                        'name'      => 'checkbox',
+                        'label'     => __( 'Checkbox', 'mytextdomain' ),
+                        'desc'      => __( 'Checkbox Label', 'mytextdomain' ),
+                        'type'      => 'checkbox'
                     ),
                     array(
-                        'name' => 'radio',
-                        'label' => __( 'Radio Button', 'mytextdomain' ),
-                        'desc' => __( 'A radio button', 'mytextdomain' ),
-                        'type' => 'radio',
-                        'default' => 'no',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
+                        'name'      => 'radio',
+                        'label'     => __( 'Radio Button', 'mytextdomain' ),
+                        'desc'      => __( 'A radio button', 'mytextdomain' ),
+                        'type'      => 'radio',
+                        'default'   => 'no',
+                        'options'   => array(
+                            'yes'   => 'Yes',
+                            'no'    => 'No'
                         )
                     ),
                     array(
-                        'name' => 'multicheck',
-                        'label' => __( 'Multile checkbox', 'mytextdomain' ),
-                        'desc' => __( 'Multi checkbox description', 'mytextdomain' ),
-                        'type' => 'multicheck',
-                        'default' => array('one' => 'one', 'four' => 'four'),
-                        'options' => array(
-                            'one' => 'One',
-                            'two' => 'Two',
+                        'name'      => 'multicheck',
+                        'label'     => __( 'Multile checkbox', 'mytextdomain' ),
+                        'desc'      => __( 'Multi checkbox description', 'mytextdomain' ),
+                        'type'      => 'multicheck',
+                        'default'   => array('one' => 'one', 'four' => 'four'),
+                        'options'   => array(
+                            'one'   => 'One',
+                            'two'   => 'Two',
                             'three' => 'Three',
-                            'four' => 'Four'
+                            'four'  => 'Four'
                         )
                     ),
                     array(
-                        'name' => 'selectbox',
-                        'label' => __( 'A Dropdown', 'mytextdomain' ),
-                        'desc' => __( 'Dropdown description', 'mytextdomain' ),
-                        'type' => 'select',
-                        'options' => array(
-                            'yes' => 'Yes',
-                            'no' => 'No'
+                        'name'      => 'selectbox',
+                        'label'     => __( 'A Dropdown', 'mytextdomain' ),
+                        'desc'      => __( 'Dropdown description', 'mytextdomain' ),
+                        'type'      => 'select',
+                        'options'   => array(
+                            'yes'   => 'Yes',
+                            'no'    => 'No'
                         )
                     )
                 ),
                 'wp_settings_api_about' => array(
                     array(
-                        'name' => 'about',
-                        'label' => __( 'About', 'mytextdomain' ),
-                        'desc' => __( $about, 'mytextdomain' ),
-                        'type' => 'about'
+                        'name'      => 'about',
+                        'label'     => __( 'About', 'mytextdomain' ),
+                        'desc'      => __( $about, 'mytextdomain' ),
+                        'type'      => 'about'
                     )
                 )
             );

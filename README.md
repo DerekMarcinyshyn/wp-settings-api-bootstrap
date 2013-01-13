@@ -7,6 +7,8 @@ tareq1988 - [https://github.com/tareq1988/wordpress-settings-api-class](https://
 
 Derek Marcinyshyn - [derek.marcinyshyn.com](http://derek.marcinyshyn.com)
 
+* added new types -- about, colorpicker, and media
+
 Description
 -----------
 
